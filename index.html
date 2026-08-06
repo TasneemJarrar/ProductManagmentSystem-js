@@ -59,7 +59,7 @@
               <input type="number" onkeyup="getTotal()"
                 class="flex-1 p-3 bg-gray-300 dark:bg-gray-700 text-black dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 rounded-2xl outline-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 transition-colors duration-200 ease-in-out"
                 id="discount" placeholder="discount" required>
-              <p id="totalContainer" class="bg-rose-400/70 dark:bg-rose-500/40 rounded-2xl p-3">Total<span id="total" class=""></span></p>
+              <p id="totalContainer" class="bg-rose-400/70 dark:bg-rose-500/40 rounded-2xl p-3">Total<span class="hidden equalSign">=</span><span id="total" class=""></span></p>
             </div>
 
             <input type="number"
@@ -114,81 +114,7 @@
                 <th class="p-3">Actions</th>
               </tr>
             </thead>
-            <tbody id="productsInfo">
-              <tr class="odd:bg-white even:bg-gray-100 dark:odd:bg-gray-800 dark:even:bg-gray-700">
-                <td class="p-3 text-sm">1</td>
-                <td class="p-3">Wireless Mouse</td>
-                <td class="p-3">5</td>
-                <td class="p-3">0</td>
-                <td class="p-3">10%</td>
-                <td class="p-3 font-semibold">$27.49</td>
-                <td class="p-3">Accessories</td>
-                <td class="p-3 font-semibold">$24.99</td>
-                <td class="p-3">
-                  <button
-                    class="px-2 py-1 bg-purple-300 dark:bg-purple-500 text-white rounded-md hover:bg-purple-400 dark:hover:bg-purple-600 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                      <path fill="currentColor"
-                        d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83l3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z" />
-                    </svg>
-                  </button>
-                  <button class="px-2 py-1 bg-red-500 text-white rounded-md ml-2 hover:bg-red-600 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                      <path fill="currentColor"
-                        d="M7 21q-.825 0-1.412-.587T5 19V6q-.425 0-.712-.288T4 5t.288-.712T5 4h4q0-.425.288-.712T10 3h4q.425 0 .713.288T15 4h4q.425 0 .713.288T20 5t-.288.713T19 6v13q0 .825-.587 1.413T17 21zm3.713-4.288Q11 16.426 11 16V9q0-.425-.288-.712T10 8t-.712.288T9 9v7q0 .425.288.713T10 17t.713-.288m4 0Q15 16.426 15 16V9q0-.425-.288-.712T14 8t-.712.288T13 9v7q0 .425.288.713T14 17t.713-.288" />
-                    </svg>
-                  </button>
-                </td>
-              </tr>
-              <tr class="odd:bg-white even:bg-gray-100 dark:odd:bg-gray-800 dark:even:bg-gray-700">
-                <td class="p-3 text-sm">2</td>
-                <td class="p-3">Mechanical Keyboard</td>
-                <td class="p-3">12</td>
-                <td class="p-3">0</td>
-                <td class="p-3">5%</td>
-                <td class="p-3 font-semibold">$96.55</td>
-                <td class="p-3">Peripherals</td>
-                <td class="p-3 font-semibold">$89.00</td>
-                <td class="p-3">
-                  <button
-                    class="px-2 py-1 bg-purple-300 dark:bg-purple-500 text-white rounded-md hover:bg-purple-400 dark:hover:bg-purple-600 transition-colors">Edit</button>
-                  <button
-                    class="px-2 py-1 bg-red-500 text-white rounded-md ml-2 hover:bg-red-600 transition-colors">Delete</button>
-                </td>
-              </tr>
-              <tr class="odd:bg-white even:bg-gray-100 dark:odd:bg-gray-800 dark:even:bg-gray-700">
-                <td class="p-3 text-sm">3</td>
-                <td class="p-3">USB-C Charger</td>
-                <td class="p-3">3</td>
-                <td class="p-3">0</td>
-                <td class="p-3">0%</td>
-                <td class="p-3 font-semibold">$18.49</td>
-                <td class="p-3">Chargers</td>
-                <td class="p-3 font-semibold">$15.49</td>
-                <td class="p-3">
-                  <button
-                    class="px-2 py-1 bg-purple-300 dark:bg-purple-500 text-white rounded-md hover:bg-purple-400 dark:hover:bg-purple-600 transition-colors">Edit</button>
-                  <button
-                    class="px-2 py-1 bg-red-500 text-white rounded-md ml-2 hover:bg-red-600 transition-colors">Delete</button>
-                </td>
-              </tr>
-              <tr class="odd:bg-white even:bg-gray-100 dark:odd:bg-gray-800 dark:even:bg-gray-700">
-                <td class="p-3 text-sm">4</td>
-                <td class="p-3">Noise Cancelling Headphones</td>
-                <td class="p-3">18</td>
-                <td class="p-3">0</td>
-                <td class="p-3">15%</td>
-                <td class="p-3 font-semibold">$187.99</td>
-                <td class="p-3">Audio</td>
-                <td class="p-3 font-semibold">$199.99</td>
-                <td class="p-3">
-                  <button
-                    class="px-2 py-1 bg-purple-300 dark:bg-purple-500 text-white rounded-md hover:bg-purple-400 dark:hover:bg-purple-600 transition-colors">Edit</button>
-                  <button
-                    class="px-2 py-1 bg-red-500 text-white rounded-md ml-2 hover:bg-red-600 transition-colors">Delete</button>
-                </td>
-              </tr>
-            </tbody>
+            <tbody id="productsTable"></tbody>
           </table>
         </div>
 
